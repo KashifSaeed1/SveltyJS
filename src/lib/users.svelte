@@ -1,7 +1,7 @@
 <script>
   import FilterUser from './FilterUser.svelte';
   import User from "./user.svelte";
-
+  
   let users = [
     { id: 1, userImage: "image1.jpg", userName: "John Doe", userEmail: "john@example.com", active: "active" },
     { id: 2, userImage: "image2.jpg", userName: "Jane Smith", userEmail: "jane@example.com", active: "inActive" },
@@ -12,10 +12,15 @@
 
   const filter = (status) => {
     if (status === "all") {
-      filterUsers = [...users]; 
+      filterUsers = [...users];
     } else {
       filterUsers = users.filter((user) => user.active === status);
     }
+  };
+
+  const remove = ({ detail }) => {
+    users = users.filter(user => user.id !== detail);
+    filterUsers = filterUsers.filter(user => user.id !== detail); // Update displayed list
   };
 </script>
 
@@ -27,13 +32,17 @@
   <div class="w-full max-w-md space-y-4">
     {#each filterUsers as user, i (user.id)}
       <User
+        user={user}
         userImage={user.userImage} 
         userName={user.userName} 
         userEmail={user.userEmail} 
         index={i} 
+        on:remove={remove}
       />
-    {:else}
-      <p class="text-gray-600 text-center">No users found</p>
     {/each}
+    
+    {#if filterUsers.length === 0}
+      <p class="text-gray-600 text-center">No users found</p>
+    {/if}
   </div>
 </div>

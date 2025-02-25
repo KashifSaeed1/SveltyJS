@@ -1,8 +1,6 @@
 <script>
   import { createEventDispatcher } from "svelte";
-
   const dispatch = createEventDispatcher();
-
   const filter = (e) => {
     dispatch('filter', e.target.value);
   };
