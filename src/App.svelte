@@ -1,5 +1,5 @@
 <script>
-  import User from "./lib/user.svelte";
+  import User from "./lib/users.svelte";
 
 </script>
 <User/>
