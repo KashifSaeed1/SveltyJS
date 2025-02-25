@@ -25,29 +25,33 @@ let users = [
 { 
      id: 4,
     userImage :  "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMwAAADACAMAAAB/Pny7AAABBVBMVEXI7/3///95y5yg4f3rsZxZWWXljXJjrH1ERU7rs57li3Cc4P3E7v3mknj2/P/qrJZKVWTnmH/R+v+kc2vC7PVywZLO9P9nroKs5f2U1r2n39Og1cjU8v1TUV3imYV1yZe66v3r+f54ipSCkp7P2d1ap3Lh9v653OfppY4/PkfX19eHwqtjb3lNR1Q1MDnHgnB1gI3Xh3CYcWxRSlHnhGTfysPXzcy45+nYlneSxpvZtpyEz6mos4q3q4atzNihu8aQpa9oX2eAaWqxeGxFO0kuJS9wWFnSnIqKY12vioLEmYy7rq/Wq523ub7pfVjbta6vzbWYuozKnnx0uJTFu5ywup3EpoS7jEJnAAAOG0lEQVR4nM2de0MaSRLAO0EQhgEEcUR8oqj4iKjRoEkU0M0le5dbNzG33/+jXM8MYHdPP6q6ZzD1zyZZCfNLPbu6uoe8cZTqAfGJlezkWCmXdzquz0LcSDobviVKKH6Lx2ltVF8NJlSKA0qsnhaPQzoOPPYwaaCE2hFwcuRg7jDVgyAFEglOjuJ05gpTPdhIC2WCU2ZxWr6ddqxgDjZSJJng5MqsclrExnUsYDqpo4Qi2lprYw4w1SxIJjhlHqeTNcxBmr6SwCmXOfVgHw7381XbbA8UPotS7XSyg7GuXOAi1jg+JhAgYKqphmOViMppIaI0HKYzFxYqoqnBCzYojH1xTEgQCfznhbBW9jvpwliaWNBoBIczIfR3IKaEqQFpYDBWJtYgh/fD0d75+Wks57t7o/tDymdBA8ugIBi8iQUN/35EKfKbkRSPYinmT09HQ9Iw6scXoloORAOBOUCSUJT70WmeguRfpBhJTLR7T4zq4WlyOUiMBsBgWRrB8Dwvk+JEjopH+aHR2gSa8o6ZxgiDdf0gGObfbUph8pvFGc+Xo1HTZGxoGhMMlqU5PH0nJxFwimeboyaOxhjUDDBIluD+XKUVmXZO7/Xa8VtlFI0eBscSHI5MKLxyjs72Dg00KN1oYZB6oWoxooi2dnqfIo0OBsUSNId5s1qSytnUBwLR0nZ0NBoYJMsISBLRvHuhKepNTdSNLqZpYFA2dri3CdVLRMPEgaNzLQ0i36hhULny8ByDIpra6aHu7xZp1LWAEgbFEqBZBBptxhFplHWaCqaDisnaRAmgOctrY9pOGUajgOlg6uRgz4blpVaLQrSWRlx8KpbSchhcIBv9YcXCqqb4ZU9LAyts5DAYlsYQ7y8SmrOhe0iTwmA6fcGhLYpAs6mtBUQa6XPL/hDl/M1dBxjWbYqnunQjVAK5ssxtJDC4tiUm8etVUxxhKoGWxNAkMCjnvz+19hiR5iiPMrQdCAzKyMieGwtnaEd72tzZEmiS2SYBU0V066hiHFF4QzsaahsDxqVaAga1k9S0TJcq1ZyjirSEoYkwHQwLcVcMr5o/htqvEwwt0UwTYJBrS2ePEWDOdrVeY1p3CjC4jTGXfCmnKd5rv9CQOvnfIjcsRykoRlDNSP+N+oqTh8EppumYYyQ0R3n9V/pCHcDXaBwMzvvJvXsoE2GKX/R2logBB0oYZMfPyv2X8uPxkvBnXAjQ5zlfDM9VBQwu95MGuLXEsjz0Ly4eBRo2AhwZGuq6gpOFQU5e+BZrsqWHC69Q8JZ5GoydiappyWGwihniXWbpskJZqDxwNPwizV41DAymKAthdvFWtlyYyAX/56yZnRpgBNXkcjKYKnKrr4EOzOO+501p+iqY4qZpF0qtmhcY7KySj2QZT00slsexAubM9I8qbhC2kjBIj6G1DMJlaDy+ZNQyoXnxGxbmi7ZyDkVc2BwkYLCb4wE0ZS4tLY0flvsFHiW0tMvx0oQH3qYJRbkUmMKgx8jEDtOSXPL5h8vH/sUMxSv0erNf9pcfos8J5ZnJaXyxDOgIMOjt8QZfZY4vlyXy2O/3LyqMUrxKb6HUeyG76Pcfly/HHMwefludh6miRxV5mHFfNKLp8/LWtVUrLZReaAoxZ3/MxuZdI0wicVY5GGSJGcJwldljwiNkYJVaqbRApdTjPch7xMGolpzEzv0FmPGFGYZ6S4wS0tTq7Ae8i/c4GEUIIJaKQcPUazOUkKbUqzjAiIu0yfp5HjCVSp26PYMS0iwwunGFmdoZid0fP4HFw/QrCqnX670aJeFREjD/ovIeASPfFSB2sUyE+VqTS4iRAEnAFC5C6T9+ew+FkW/YEEsrE6LZ15JCJBwSGBrBQyn0v0FhpHYWwdhMXk9gJgXJV9VDA2FmEe8bEEZMNdEWNLG0sinMw5//DgXLooCh8g0GI7UzYmllMcwDnsIEUyjCYGSlM7G0shBm88EWRQPj9WEwsu10YjvmS2EcWDSa8WAwYjswdBqC3JFhYRxYNDBX/wHBCE4TrQMIfvE/hfkzI5gn2D+u6DQxjN2RmMaeC4vOzL7DNCNxGmJTMUcw/61lpRkYjKRRS6zH/D9kBfMBZmaSFRqxPUQWXLuw6GCM3ZkJTLITQCz9PzOYqwXo8ySbgQTfMJvAZGRmf3WhT5CMAMT2fJ/f7WUBc3UNfhwRxqcwtkdIA2V5bw/jXT3BHyARzlxgjl1Uw8NUpguaa0Q1Im4HlCmM9VEy/8kFpsY0NArxCnvraQNTWYnhzAmGEAcaDsb7etylEjRQz5KAqRLLyBz9beS6ZBvSSj1GMVfXBHVccCJiBDgglpF5QnN8/bQQdy6cYD5YfX0iNhPXk9fd41A+YEMb228uFMC5RQtDnGGIH8oGEobrz3o9u4iaAUwkzWucoXH+f/VkOq+lgBETDUnp2oVjJAxrZZYuk9zcTAumi7SzLcbK6nYukx0MQdlZqcbGsifLZxBhcimh0OIGZWeslXnA1VhCEiuatGDIxhOGhk3/C7bGkR2Mf4ywMi7JYIrLOcEgVFNaYGY1vBpwmTxXmOAYGtBKbMKs2HpMpjDgIpoLZd53++/LFIaAVFMq1RmWikNqyBTG7/YAOKUtNsccWxuZDCbNW6ToStpIw9X+f1lHslCSSTPVK7Ea16a+AL+OAXZiFZJdOROLb6hqaLU8i2Se992tYk/CpH0tlpaGHZrxPODehVKSS4DU7/hSLzpLCz1GLxVEi0wuWS3OWPkQPraUhY1jlWvnL0rCuDQ0pEIDdE9CUyr1uB7mVtfRyGQNDYdWk1z87pbHjzBFKKyJFSoVb6vr/MXJVpNLE1AqIUyhwuFEKIyF0V+nACNpAmYDU4gHzEoRSRIlGxiHxrnyO7rT9X1lK+Sp9fiu8iSYpQCTmydMOG1ar3jx80e9cabC3LLsYjBfJKYZ+80m9Xd02RJfJSloRrbZlHps7j716hXF7isL4xqaZduAacTmJivd7wuhx+txKAz3oSZ+FyA512S9dT7jGLTb62us/P0xjMVbeu14N3/THz15kfX1Aa5JK986d7lSctBe+7QtyO3HSWqp19X68W5+hD+7srK4uB/L4urzehvBIx1qsBw3odKkJG+3t98KEsFEOLUeBZoMYCZgbqcfpDyxRDzGK9xUMNG4iW04C9qURASJYWqzzF8Kt6J6VOoizM/b2QdWZjiLIQ5wwSYfBLKKAMHgkwwkkl9cUTaRLQHmH+4ji4w8D0DKkY9o2QzPBW25VkLZ/p90kLnC09zxH2KUs7i6Dnkiwf2nw3N4p2muKVEozMRpEotMwf/VNPsn5kCgGGvEO42WRbCzGQxnZ97P5KdwNIqBU/QosIll+4dkbcY2/umaWVQMmkY1Cowd0jawSFVTqpsUI1qa4SHELNOxG59vG1m2bxOHMnpmxQg069qHUI7P4+xsYGQJAxrfcOInZQreneLv4GjauqdQH2zA2FnzEwDm7favGsfCGdnVP8rPrbIRWuc2MitDHwYKzA4Ty6+XRi3fY6IsK8pP8W6jTjeaw0CIU5oQI5vQzHTDpRhPx8KrZn+gfAzNMS2Ena1BWajfSFm8O+2nWNUsqlWjO0AHrpybYJZZJcAdMU1mflFYmEWVarRHG8HxDOoxMc32j4/hZqwXc9D/3typSzoZjUo1+kOn0B4NKJRxOD9vbsKuTKVyc/PzsxlFKKBhihGOAwNDgKbuV+Lc3n7+fHf3+fOtZB1nglmVrwZExQgHtYGdgHUsywQoFPCPG+3MeIQeFgJQLmMrHIzsKYyXG4DaZ7DsnybMs6wKMF87AQkBeJexETbVPEuCM+BCEEgroD0PFj5vSlbQkKtaAJfozB9G0g4AXaID8JrfAgZ2vZHZa34HGODFU2bV/A4w0CvBjLnmN4ABX9ZmLDd/Axj4NXqmzsbrwyAuODRVaK8Pg7l60qCaV4dBXQpqaG28NgzyulZ9DHhtGORFuvrw/Mow6CuOtbs1rwyDv3xaVwe8LozFteA6Q3tVGKsL2zVX6b8CzKx7bnmVvjqimXaZ0hGGZXG252T7kgNN6pwHDdNtZvbPrF8/oXGbpnmnaS4siBeD6AqBbGn4vbOX1ozAgnpli+5lOpoJgDRZ9tmdM6eX6WizTXbdM9bE2M6s42uO9M3njMIAa2Ps1rnzC6j0NO0MlAMtyTSvCbV7aVswWEvZc1b4PqauvLR5aZt+bdNMVzms569yM2cpvU5PT5Omchi17C+etPn1GOKVmg6voAyVkwoOqxZhFDC9V1AaBwSaaeSclVVGLet81z/Nl4Oaxx2cbY1F2T8RNjDSfW0rYHhjsOZga1zGF1FSf6EuZBSlaYvDoUj2yOAxGQoD2IgOEHMbUpQw4SdmZrN4CTWEhuK0wx1CuIKE6V+S7KJk9Hpw4IvbFSPbUpIpSjSWPZCgZPfidlpDw2ZrBjGPFmhGEg7Mn5zISCQhGcQChIFPpA3a6zGQfG4xIokn/6OjDPImXaKE6cCeEgjzpgoytUiaA6qhCdEMantldoZh8fn5ZL09aEp1EsoOl17KZR/IAoYBm9oEiBIN2iHTp5UwL+5Hnr4aHi1p0/+DeAcgNTGA62NhrCbTmxHVVJpNYhy+TriLYonsCAOMam4irvYJWC1YGOR7Q/EiqmU2r5QFjPVhG5jslPnCEvtw2J93PaKmQ+GDWM5YV7rDhGEtGxTewIB50hWG2lrqOLR8KXMoKMd3gqEp1OUIoQSFt7CWj4jHzjAhTpAWji9aGOlYPpQtTFzgpMDDo9BwRuy04gaTDo6A0tro2DhLCjAUhxZsLpeK8vaFKcMygHmDKqdFpfDZHlzoq+X/BVg3EKJZGc8AAAAASUVORK5CYII=",
-    userName : "chapre",
+    userName : "Asad",
      userEmail :"john@gmail.com",
 }
 ]
 
 const getUser = () => {
     
-    return users;   // [] for not user
+    return users; // [] for not user
 }
 </script>
-<div>
-  <h1>List of User</h1>
-        {#each getUser() as {userImage, userName, userEmail, id}, i(id)}
-            <div>
-                <p>{i + 1}</p>
-                <img src={userImage} alt="">
-                <p>{userName}</p>
-                <p>{userEmail}</p>
-            </div>
-            {:else}
-                <p>not user found</p>
-            
-            {/each}
+
+<div class="flex flex-col items-center p-6 bg-gray-100 min-h-screen">
+  <h1 class="text-red-500 text-2xl font-bold mb-4">List of Users</h1>
+  <div class="w-full max-w-md space-y-4">
+    {#each getUser() as { userImage, userName, userEmail, id }, i (id)}
+      <div class="flex items-center p-4 bg-white rounded-lg shadow-md space-x-4">
+        <p class="text-lg font-semibold text-gray-700">{i + 1}</p>
+        <img src="{userImage}" alt="User Image" class="w-12 h-12 rounded-full border border-gray-300">
+        <div>
+          <p class="text-gray-800 font-medium">{userName}</p>
+          <p class="text-gray-500 text-sm">{userEmail}</p>
+        </div>
+      </div>
+    {:else}
+      <p class="text-gray-600 text-center">No users found</p>
+    {/each}
+  </div>
 </div>
 
 
